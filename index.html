@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriChoice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <img src="LGO-removebg-preview.png" alt="NutriChoice Logo" class="logo">
+    <h2 class="slogan">Teman Pintar Gaya Hidup Sehat</h2>
+
+    <div class="card">
+      <!-- Form Input -->
+      <form id="nutriForm" class="form-box">
+        <input type="number" id="age" placeholder="Umur (tahun)" required>
+        <input type="number" id="weight" placeholder="Berat Badan (kg)" required>
+        <input type="number" id="height" placeholder="Tinggi Badan (cm)" required>
+        <button type="button" onclick="getRecommendation()">Dapatkan Rekomendasi</button>
+      </form>
+
+      <!-- Hasil & Gambar -->
+      <div class="result-wrapper" style="display:none;">
+        <div id="result" class="result-card"></div>
+        <div id="chartBox" class="chart-card">
+          <img id="bmiImage" src="" alt="Ilustrasi BMI" style="max-width:100%; display:none;">
+        </div>
+      </div>
+
+      <!-- Tips & Edukasi Gizi -->
+      <div id="tipsSection" class="tips-card" style="display:none;">
+        <h3>Tips & Edukasi Gizi</h3>
+        <p id="tipsText"></p>
+        <button class="btn-tips" onclick="tampilkanTips()">Lihat Tips Lainnya</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p class="copyright">© 2025 NutriChoice</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
